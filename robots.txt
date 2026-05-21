@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://umaradnaan123.github.io/ColorVerse/sitemap.xml
