@@ -205,7 +205,30 @@ header {
   background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 50%, var(--accent3) 100%);
   -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
 }
-.hero p { color: var(--text-muted); font-size: 1.1rem; max-width: 560px; margin: 0 auto 40px; line-height: 1.6; }
+.hero p { color: var(--text-muted); font-size: 1.1rem; max-width: 560px; margin: 0 auto 30px; line-height: 1.6; }
+
+/* Action Button Container */
+.action-btn-container {
+  margin-bottom: 40px;
+  text-align: center;
+}
+.action-btn-container button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+  box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+}
+.action-btn-container button:hover {
+  background-color: #45a049;
+  transform: scale(1.03);
+}
 
 /* ============================================================
    GLASS PANEL
@@ -486,6 +509,10 @@ footer { text-align: center; padding: 40px 20px; color: var(--text-muted); font-
       <div class="hero-badge">✦ Free Color Utility Tool</div>
       <h1>Find Any <span>Color Code</span><br>For Web & Design</h1>
       <p>An interactive tool designed for developers and creators. Generate custom gradient outputs, build harmonic palettes, and extract clean color variables effortlessly.</p>
+
+      <div class="action-btn-container">
+        <button onclick="showPage('palette')">Click Here</button>
+      </div>
 
       <div class="search-wrap">
         <div class="glass search-row">
@@ -1061,15 +1088,15 @@ function downloadPaletteFromImg() {
   toast('Palette PNG downloaded!');
 }
 
+/* ============================================================
+   GRADIENT ENGINEERING PIPELINE
+============================================================ */
 function downloadDetectedJSON() {
   if(!window._detectedColors){toast('No palette','error');return;}
   const data=window._detectedColors.map(d=>({name:d.name,hex:d.hex,rgb:d.rgb,hsl:d.hsl}));
   downloadJSON(data,'detected-palette.json');
 }
 
-/* ============================================================
-   GRADIENT ENGINEERING PIPELINE
-============================================================ */
 let gradStops=[{color:'#7c5cff',pos:0},{color:'#ff5caa',pos:100}];
 
 function initGradient() {
