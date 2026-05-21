@@ -32,13 +32,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
 
 <!-- JSON-LD Structured Data -->
-  <!-- Google tag (gtag.js) -->
+<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MSVDZEPQMW"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-MSVDZEPQMW');
 </script>
 <script type="application/ld+json">
@@ -510,58 +509,9 @@ footer { text-align: center; padding: 40px 20px; color: var(--text-muted); font-
   .search-btn { border-radius: 10px; }
   .results-grid { grid-template-columns: 1fr; }
 }
-
-/* ============================================================
-   SPONSORED CARD STYLES
-============================================================ */
-.feature-card.sponsored {
-  border: 1px solid rgba(255, 92, 170, 0.4);
-  background: linear-gradient(135deg, rgba(255, 92, 170, 0.05), rgba(124, 92, 255, 0.05));
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.sponsored-badge {
-  position: absolute; top: 12px; right: 12px;
-  background: var(--accent2); color: #fff;
-  font-size: 0.65rem; font-weight: 800; padding: 2px 8px;
-  border-radius: 4px; text-transform: uppercase; letter-spacing: 0.05em;
-  z-index: 2;
-}
-.ad-btn-wrap {
-  margin-top: 16px;
-  position: relative;
-  z-index: 2;
-}
-.ad-btn-small {
-  width: 100%;
-  padding: 10px;
-  background: var(--accent2);
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-weight: 700;
-  font-size: 0.8rem;
-  cursor: pointer;
-  transition: var(--transition);
-}
-.ad-btn-small:hover:not(:disabled) {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 15px var(--glow2);
-}
-.ad-btn-small:disabled {
-  background: var(--panel-border);
-  color: var(--text-muted);
-  cursor: not-allowed;
-}
 </style>
 </head>
-
-
-<div class="top-ad-banner" style="display:flex; justify-content:center; padding:10px 0; background:rgba(0,0,0,0.2);">
-  <script async="async" data-cfasync="false" src="https://pl29437526.profitablecpmratenetwork.com/90cf8b6dcff310941412888f3eb3081a/invoke.js"></script>
-  <div id="container-90cf8b6dcff310941412888f3eb3081a"></div>
-</div>
+<body>
 
 <div class="bg-blobs" aria-hidden="true">
   <div class="blob blob1"></div>
@@ -635,17 +585,6 @@ footer { text-align: center; padding: 40px 20px; color: var(--text-muted); font-
           <h3 class="feature-title">Palette Generator</h3>
           <div class="feature-desc">Generate complementary, triadic, analogous and more color palettes.</div>
         </div>
-        <div class="feature-card glass sponsored" id="sponsored-card" role="button" tabindex="0" aria-label="Sponsored Offer">
-          <span class="sponsored-badge">Promoted</span>
-          <div>
-            <div class="feature-icon">🎁</div>
-            <h3 class="feature-title">Exclusive Reward</h3>
-            <div class="feature-desc">Claim your sponsored developer tools and premium assets for free.</div>
-          </div>
-          <div class="ad-btn-wrap">
-            <button class="ad-btn-small" id="ad-btn-main">Checking offer...</button>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -692,8 +631,6 @@ footer { text-align: center; padding: 40px 20px; color: var(--text-muted); font-
         </div>
 
       </div>
-
-
     </section>
   </div>
 </div>
@@ -851,6 +788,7 @@ footer { text-align: center; padding: 40px 20px; color: var(--text-muted); font-
 </div>
 
 </main>
+
 <footer class="glass" style="margin-top:60px; padding:40px 0; border-radius:var(--radius) var(--radius) 0 0; border-bottom:none">
   <div class="wrapper">
     <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:20px">
@@ -883,21 +821,6 @@ footer { text-align: center; padding: 40px 20px; color: var(--text-muted); font-
     </div>
   </div>
 </footer>
-
-<div class="bottom-ad-banner" style="display:flex; justify-content:center; padding:20px 0; background:rgba(0,0,0,0.1); margin-top:20px">
-  <div id="container-bottom-ad">
-    <script>
-      atOptions = {
-        'key' : '000eaab5e17202026dba84d2ab587e37',
-        'format' : 'iframe',
-        'height' : 90,
-        'width' : 728,
-        'params' : {}
-      };
-    </script>
-    <script src="https://www.highperformanceformat.com/000eaab5e17202026dba84d2ab587e37/invoke.js"></script>
-  </div>
-</div>
 
 <script>
 /* ============================================================
@@ -979,57 +902,6 @@ const COLOR_NAMES = {
   'ocean blue':'#006994','sunset orange':'#fd5e53','emerald green':'#50c878'
 };
 
-/* ============================================================
-   ADSTERRA DIRECT LINK LOGIC
-============================================================ */
-const AD_URL = "https://www.profitablecpmratenetwork.com/b2r8r4vba?key=c509707241dc8f425cdd67fe12b30e63";
-
-// 1. One-time Body Click (Smart Pop)
-// Only triggers if clicking background, not on interactive tools
-document.addEventListener('click', (e) => {
-    const isInteractive = e.target.closest('button, input, a, select, .feature-card:not(.sponsored)');
-    if (isInteractive) return;
-    
-    if (!localStorage.getItem('ccf_ad_fired')) {
-        window.open(AD_URL, '_blank');
-        localStorage.setItem('ccf_ad_fired', 'true');
-    }
-}, { once: true });
-
-// 2. Countdown logic for the Sponsored Card
-function initAdCountdown() {
-    const btn = document.getElementById('ad-btn-main');
-    if (!btn) return;
-    
-    let count = 5;
-    btn.disabled = true;
-    
-    const timer = setInterval(() => {
-        btn.textContent = `Unlocking in ${count}s...`;
-        count--;
-        if (count < 0) {
-            clearInterval(timer);
-            btn.textContent = "Get Offer Now ✦";
-            btn.disabled = false;
-            btn.onclick = (e) => {
-                e.stopPropagation();
-                window.open(AD_URL, '_blank');
-            };
-            // Also make the whole card clickable
-            const card = document.getElementById('sponsored-card');
-            if (card) {
-                card.style.cursor = 'pointer';
-                card.onclick = () => window.open(AD_URL, '_blank');
-            }
-        }
-    }, 1000);
-}
-
-// Run countdown on load
-window.addEventListener('DOMContentLoaded', () => {
-    setTimeout(initAdCountdown, 800);
-});
-
 function nearestColorName(tc) {
   const [r,g,b] = [tc.toRgb().r, tc.toRgb().g, tc.toRgb().b];
   let best=''; let bestD=1e9;
@@ -1044,9 +916,7 @@ function nearestColorName(tc) {
 function parseColorInput(raw) {
   raw = raw.trim();
   if(!raw) return null;
-  // try direct tinycolor parse
   let tc = tinycolor(raw);
-  // try color name dict
   const lower = raw.toLowerCase();
   if(COLOR_NAMES[lower]) tc = tinycolor(COLOR_NAMES[lower]);
   if(!tc.isValid()) return null;
@@ -1074,8 +944,6 @@ function createColorCard(data) {
       ${codeRow('RGB',data.rgb)}
       ${codeRow('HSL',data.hsl)}
     </div>`;
-  // add glow on hover
-  const prev = card.querySelector('.color-preview');
   card.addEventListener('mouseenter',()=>{ card.style.boxShadow=`0 12px 40px ${data.hex}55`; });
   card.addEventListener('mouseleave',()=>{ card.style.boxShadow=''; });
   return card;
@@ -1137,7 +1005,6 @@ function doConvert() {
     });
     if(!found){ toast('No valid colors found','error'); empty.style.display='block'; }
     else {
-      // save to recent
       const trimmed=val.trim();
       recentSearches = [trimmed,...recentSearches.filter(x=>x!==trimmed)].slice(0,8);
       localStorage.setItem('ccf-recent',JSON.stringify(recentSearches));
@@ -1220,14 +1087,12 @@ function extractColors(img) {
       });
       results.appendChild(grid);
 
-      // Download buttons
       const row=document.createElement('div');
       row.className='row mt-4';
       row.innerHTML=`<button class="btn" onclick="downloadPaletteFromImg()" aria-label="Download palette as PNG">⬇ Download PNG</button>
         <button class="btn-ghost" onclick="downloadDetectedJSON()" aria-label="Download palette as JSON">⬇ JSON</button>`;
       results.appendChild(row);
 
-      // store for download
       window._detectedColors=[dominant,...palette].map(rgb=>buildCardData(tinycolor({r:rgb[0],g:rgb[1],b:rgb[2]})));
       toast('Extracted '+(palette.length+1)+' colors!');
     } catch(err) {
@@ -1274,7 +1139,6 @@ function renderStops() {
       <span style="font-size:0.8rem;color:var(--text-muted);font-family:var(--font-mono);min-width:34px">${s.pos}%</span>
       ${gradStops.length>2?`<button class="icon-btn" onclick="removeStop(${i})" aria-label="Remove stop">✕</button>`:''}`;
     cont.appendChild(row);
-    // update position label on range input
     const range=row.querySelector('input[type=range]');
     const label=row.querySelector('span');
     range.addEventListener('input',()=>{ label.textContent=range.value+'%'; });
@@ -1415,26 +1279,10 @@ function downloadJSON(data, filename) {
 (function init() {
   renderHistory();
   renderSaved();
-  // detect system theme if no preference
   if(!localStorage.getItem('ccf-theme')) {
     if(window.matchMedia('(prefers-color-scheme: light)').matches) applyTheme('light');
   }
-  // Enter key on hero search
   document.getElementById('heroSearch').addEventListener('keydown',e=>{if(e.key==='Enter')doSearch();});
-
-  // Protocol Fix for local testing
-  if (window.location.protocol === 'file:') {
-    console.warn('Running locally via file:// protocol. Fixing protocol-relative URLs...');
-    document.querySelectorAll('script, link, img').forEach(el => {
-      const src = el.src || el.href;
-      if (src && src.startsWith('file://') && !src.includes(window.location.pathname)) {
-         // Attempt to fix protocol-relative URLs that resolved to file://
-         const fixed = src.replace('file://', 'https://');
-         if (el.src) el.src = fixed;
-         else el.href = fixed;
-      }
-    });
-  }
 })();
 </script>
 </body>
