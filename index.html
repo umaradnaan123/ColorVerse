@@ -2,7 +2,6 @@
 <html lang="en" data-theme="dark">
 <head>
 <meta charset="UTF-8"/>
-<script src="https://www.highperformanceformat.com/000eaab5e17202026dba84d2ab587e37/invoke.js"></script>
 <meta name="google-site-verification" content="3HnqK-VdYSw0Gvki7SZizE2J_mdws5GCxxGC8AmkTgA" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta name="msvalidate.01" content="09C7A42C92C510395B16F0393F057D6C" />
@@ -38,7 +37,6 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-GN87TCMPD6');
 </script>
 
@@ -365,6 +363,7 @@ select:focus, input[type=number]:focus { border-color: var(--accent); }
   padding: 16px; font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent3);
   word-break: break-all; line-height: 1.6; position: relative; padding-right: 70px;
 }
+.code-box-text { white-space: pre-wrap; }
 .code-box .copy-btn { position: absolute; top: 10px; right: 10px; }
 
 /* ============================================================
@@ -498,9 +497,8 @@ footer { text-align: center; padding: 40px 20px; color: var(--text-muted); font-
     </div>
   </nav>
 </header>
-<body>Verification: c82ae1f0c3efbdc0</body>
-<main>
 
+<main>
 <div id="page-home" class="page active">
   <div class="wrapper">
     <section class="hero" aria-label="Hero section">
@@ -648,7 +646,7 @@ footer { text-align: center; padding: 40px 20px; color: var(--text-muted); font-
       <div>
         <div class="gradient-preview glass" id="gradPreview" aria-label="Gradient preview"></div>
         <div class="code-box" id="gradCode" aria-label="CSS gradient code">
-          background: linear-gradient(135deg, #7c5cff, #ff5caa);
+          <span class="code-box-text">background: linear-gradient(135deg, #7c5cff, #ff5caa);</span>
           <button class="copy-btn" onclick="copyGradCode()" aria-label="Copy CSS code">Copy</button>
         </div>
         <div class="row mt-4">
@@ -727,7 +725,6 @@ footer { text-align: center; padding: 40px 20px; color: var(--text-muted); font-
     </div>
   </div>
 </div>
-
 </main>
 
 <footer class="glass" style="margin-top:60px; padding:40px 0; border-radius:var(--radius) var(--radius) 0 0; border-bottom:none">
@@ -833,10 +830,9 @@ function copyText(text, btn) {
 }
 
 function copyGradCode() {
-  const codeEl = document.getElementById('gradCode');
-  if(!codeEl) return;
-  const rawText = codeEl.childNodes[0].nodeValue.trim();
-  copyText(rawText);
+  const codeTextEl = document.querySelector('#gradCode .code-box-text');
+  if(!codeTextEl) return;
+  copyText(codeTextEl.textContent.trim());
 }
 
 /* ============================================================
@@ -1150,8 +1146,8 @@ function updateGradient() {
   if(preview) preview.style.background=css;
   
   const fullCSS=`background: ${css};`;
-  const codeEl=document.getElementById('gradCode');
-  if(codeEl) codeEl.childNodes[0].nodeValue=fullCSS+'\n';
+  const codeBoxText=document.querySelector('#gradCode .code-box-text');
+  if(codeBoxText) codeBoxText.textContent=fullCSS;
   window._lastGradCSS=css;
 }
 
@@ -1270,6 +1266,15 @@ function deletePalette(id) {
   renderSaved(); toast('Palette deleted');
 }
 
+/* Ad Options Configuration Block */
+window.atOptions = {
+  'key' : '000eaab5e17202026dba84d2ab587e37',
+  'format' : 'iframe',
+  'height' : 90,
+  'width' : 728,
+  'params' : {}
+};
+
 function downloadPaletteJSON() {
   if(!currentPalette.length){toast('Generate a palette first','error');return;}
   const data=currentPalette.map(d=>({name:d.name,hex:d.hex,rgb:d.rgb,hsl:d.hsl}));
@@ -1298,15 +1303,6 @@ function downloadJSON(data, filename) {
   const cSearch = document.getElementById('convSearch');
   if(cSearch) cSearch.addEventListener('keydown', e=>{ if(e.key==='Enter') doConvert(); });
 })();
-</script>
-<script>
-  atOptions = {
-    'key' : '000eaab5e17202026dba84d2ab587e37',
-    'format' : 'iframe',
-    'height' : 90,
-    'width' : 728,
-    'params' : {}
-  };
 </script>
 <script src="https://www.highperformanceformat.com/000eaab5e17202026dba84d2ab587e37/invoke.js"></script>
 </body>
